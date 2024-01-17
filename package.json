@@ -51,11 +51,11 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --fix",
+      "pnpm lint --dir src",
       "prettier --write"
     ],
-    "./**/*.{ts,tsx}": [
-      "eslint --fix",
+    "./src/*.{ts,tsx}": [
+      "pnpm lint",
       "prettier --write"
     ]
   }
