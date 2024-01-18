@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 interface CustomLinkProps {
   children: React.ReactNode;
-  className: string | undefined;
+  className?: string;
   href: string;
 }
 
