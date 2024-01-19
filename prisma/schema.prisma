@@ -10,3 +10,14 @@ datasource db {
   url = env("POSTGRES_PRISMA_URL") // uses connection pooling
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
+
+model Product {
+  id        Int      @id @default(autoincrement())
+  name      String
+  price     Float
+  ref       String   
+  imgURL    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+}
