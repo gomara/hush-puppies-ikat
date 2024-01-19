@@ -5,6 +5,9 @@ const nextConfig = {
       fullUrl: true,
     },
   },
+  images: {
+    domains: ['ibb.co', 'https://ibb.co'],
+  },
 };
 
 module.exports = nextConfig;
