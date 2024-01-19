@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   title: 'hush-puppies-ikat',
   description: 'ikatech solution challenge',
   icons: {
-    icon: 'favicon.webp',
+    icon: '/favicon.webp',
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning className={montserrat.className} lang="es">
-      <body className="m-auto min-h-screen bg-background antialiased">
+      <body className="m-auto min-h-screen min-w-[390px] bg-background antialiased">
         <Header>
           <AnnouncementBar />
           <NavigationMenu />
