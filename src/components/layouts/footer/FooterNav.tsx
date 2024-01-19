@@ -4,7 +4,7 @@ import React from 'react';
 import { Input } from '@/components/ui/input';
 import CustomLink from '@/components/ui/link';
 
-async function FooterNav() {
+function FooterNav() {
   return (
     <nav className="grid gap-4 border-b-2 border-border px-20 py-6 sm:grid-cols-2 sm:gap-2 md:grid-cols-4">
       <ul className="text-left font-serif">

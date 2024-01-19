@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Icons } from '@/components/ui/icons';
 
-async function CardsList() {
+function CardsList() {
   return (
     <ul className="flex flex-wrap  gap-4">
       <li>
