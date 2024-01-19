@@ -2,7 +2,7 @@ import { Facebook, Instagram } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
-async function FooterMedia() {
+function FooterMedia() {
   return (
     <div className="flex flex-col items-center bg-footer">
       <Link className="font-serif text-4xl leading-[4rem]" href="/#">

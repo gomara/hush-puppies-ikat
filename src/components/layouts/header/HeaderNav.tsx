@@ -9,7 +9,7 @@ const navigationMenuTriggerStyle = cva(
 
 function HeaderNav() {
   return (
-    <div className="flex justify-between border-b-2 border-border px-20 py-2 font-serif">
+    <div className="hidden justify-between border-b-2 border-border px-20 py-2 font-serif lg:flex">
       <nav className="flex gap-6">
         <Link className={navigationMenuTriggerStyle()} href="/#">
           HOMBRE
