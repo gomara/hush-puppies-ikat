@@ -4,7 +4,7 @@ import CustomLink from '@/components/ui/link';
 
 function NavigationMenu() {
   return (
-    <nav className="flex justify-end gap-4 bg-muted px-20 py-2 font-sans font-bold ">
+    <nav className="flex justify-end gap-4 bg-muted px-20 py-2 font-sans text-xs font-bold  sm:text-sm ">
       <CustomLink className="text-muted-foreground" href="/#">
         DIRECTORIO DE TIENDAS
       </CustomLink>
