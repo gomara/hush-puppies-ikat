@@ -1,7 +1,7 @@
 ##  hush-puppies-ikat- Cristobal Gomara
 
 En este proyecto se implementó una la vista Producto de hush-puppies utilizando Next.js, Prisma y PostgreSQL.
-El proyecto se encuentra hosteado en Vercel y se puede acceder a él en el siguiente [link](https://hush-puppies-ikat.vercel.app/).
+El proyecto se encuentra hosteado en Vercel y se puede acceder a él en el siguiente [link](https://cristobal-gomara-ikatech.vercel.app/).
 
 ## Tecnologías Utilizadas
 
