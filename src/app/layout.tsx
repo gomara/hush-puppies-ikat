@@ -4,8 +4,7 @@ import { Montserrat } from 'next/font/google';
 
 import Footer from '@/components/layouts/footer/Footer';
 import Header from '@/components/layouts/header/Header';
-import AnnouncementBar from '@/components/layouts/header/AnnouncementBar';
-import NavigationMenu from '@/components/layouts/header/NavigationMenu';
+import PurchaseConfetti from '@/components/layouts/confetti/PurchaseConfetti';
 
 import './globals.css';
 
@@ -25,11 +24,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning className={montserrat.className} lang="es">
-      <body className="m-auto min-h-screen min-w-[390px] bg-background antialiased">
-        <Header>
-          <AnnouncementBar />
-          <NavigationMenu />
-        </Header>
+      <body className="m-auto min-h-screen min-w-[500px] bg-background antialiased">
+        <PurchaseConfetti />
+        <Header />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

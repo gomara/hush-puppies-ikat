@@ -1,37 +1,21 @@
 import React, { Suspense } from 'react';
 
-import ShoesCarousel from '@/components/layouts/shoePage/ShoesCarousel';
-import ShoeSection from '@/components/layouts/shoePage/ShoeSection';
-import ShoesCarouselSkeleton from '@/components/layouts/shoePage/ShoesCarouselSkeleton';
-import ShoesRecommendations from '@/components/layouts/shoePage/ShoesRecommendations';
-import ShoesLook from '@/components/layouts/shoePage/ShoesLook';
+import ShoesCarousel from '@/components/ShoeDetails/ShoeCarousel/ShoesCarousel';
+import SelectedShoeSection from '@/components/ShoeDetails/SelectedShoe/SelectedShoeSection';
+import ShoesCarouselSkeleton from '@/components/ShoeDetails/ShoeCarousel/ShoesCarouselSkeleton';
+import ShoesRecommendations from '@/components/ShoeDetails/ShoesRecommendations';
+import ShoesLook from '@/components/ShoeDetails/ShoesLook';
+import { getShoe } from '@/lib/handlers';
 
-function ShoePage() {
+async function ShoePage() {
+  const shoe = await getShoe();
+
   return (
     <div className="w-full px-20">
       <div className=" py-4 text-sm font-semibold text-muted-foreground">
-        HUSHPUPPIESCO / CALZADO / ZAPATILLA
+        HUSHPUPPIESCO / CALZADO / {shoe?.name.toUpperCase()}
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <ShoeSection />
-      </Suspense>
-
-      <section className="mb-6">
-        <h3 className="text-md font-serif font-semibold">DETALLES DEL PRODUCTO</h3>
-        <hr className="mb-2" />
-        <p className="mb-4 text-sm text-muted-foreground">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur assumenda odio,
-          deleniti quaerat doloremque incidunt quia veniam quas quibusdam aliquid adipisci
-          reprehenderit excepturi? Voluptate perspiciatis deserunt consectetur tempore odio rerum?
-        </p>
-        <h3 className="text-md font-serif font-semibold">TECNOLOGÍAS</h3>
-        <hr className="mb-2" />
-        <p className="mb-4 text-sm text-muted-foreground">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempora illo cumque
-          quia error veniam? Error libero porro commodi exercitationem. Soluta aut aspernatur beatae
-          reprehenderit illo laborum optio rem corrupti.
-        </p>
-      </section>
+      <SelectedShoeSection shoe={shoe} />
       <Suspense
         fallback={
           <ShoesCarouselSkeleton withAddToCartButton>
