@@ -6,7 +6,12 @@ const nextConfig = {
     },
   },
   images: {
-    domains: ['ibb.co', 'https://ibb.co'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ibb.co',
+      },
+    ],
   },
 };
 
