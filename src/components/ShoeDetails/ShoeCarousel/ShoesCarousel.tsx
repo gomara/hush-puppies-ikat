@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Carousel, CarouselContent } from '@/components/ui/carousel';
-import { fetchShoes } from '@/lib/handlers';
+import { Carousel } from '@/components/ui/carousel';
+import { getShoes } from '@/lib/handlers';
 
-import ShoeItem from './ShoeItem';
+import ShoesCarouselContent from './ShoesCarouselContent';
 
 interface ShoesCarouselProps {
   half?: boolean;
@@ -12,7 +12,7 @@ interface ShoesCarouselProps {
 }
 
 async function ShoesCarousel({ half, children, withAddToCartButton }: ShoesCarouselProps) {
-  const shoes = await fetchShoes(half);
+  const shoes = await getShoes(half);
 
   return (
     <section className="mb-6">
@@ -24,15 +24,7 @@ async function ShoesCarousel({ half, children, withAddToCartButton }: ShoesCarou
           loop: true,
         }}
       >
-        <CarouselContent>
-          {shoes.map((product, index) => (
-            <ShoeItem
-              key={`shoe-${index + 1}`}
-              shoe={product}
-              withAddToCartButton={withAddToCartButton}
-            />
-          ))}
-        </CarouselContent>
+        <ShoesCarouselContent shoes={shoes} withAddToCartButton={withAddToCartButton} />
       </Carousel>
     </section>
   );
