@@ -7,6 +7,7 @@ import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useBoundShoeStore } from '@/context/store';
+import { Label } from '@/components/ui/label';
 
 interface SelectedShoeSizesProps {
   selectedShoe: Product;
@@ -41,9 +42,9 @@ function SelectedShoeSizes({ selectedShoe }: SelectedShoeSizesProps) {
             </div>
           ))}
         </div>
-        <p className="mb-4 cursor-pointer font-sans text-sm font-semibold text-muted-foreground underline">
+        <Label className="mb-4 cursor-pointer font-sans text-sm font-semibold text-muted-foreground underline">
           GUÍA DE TALLAS
-        </p>
+        </Label>
         <div className="row flex items-center">
           <Button
             className="rounded-none font-sans"
