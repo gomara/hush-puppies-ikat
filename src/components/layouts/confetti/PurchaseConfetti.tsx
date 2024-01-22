@@ -10,7 +10,6 @@ function PurchaseConfetti() {
   const width = typeof window !== 'undefined' ? window.innerWidth : 0;
 
   const height = typeof window !== 'undefined' ? window.innerHeight : 0;
-  const numberOfPieces = activeConfetti ? 100 : 0;
 
   const isClient = useAvoidSSR();
 
@@ -25,14 +24,8 @@ function PurchaseConfetti() {
 
   return (
     <>
-      {isClient ? (
-        <Confetti
-          height={height}
-          numberOfPieces={numberOfPieces}
-          recycle={false}
-          run={activeConfetti}
-          width={width}
-        />
+      {isClient && activeConfetti ? (
+        <Confetti height={height} recycle={false} width={width} />
       ) : null}
     </>
   );

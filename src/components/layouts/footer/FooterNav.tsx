@@ -38,7 +38,7 @@ function FooterNav() {
         </li>
       </ul>
       <div className="text-left font-serif">
-        <Label className="mb-4 font-serif font-semibold">NEWSLETTER</Label>
+        <p className="mb-4 font-serif font-semibold">NEWSLETTER</p>
         <Label className="mb-2">Regístrate para ser el primero en recibir nuestras noticias</Label>
         <div className="relative">
           <ChevronRight className="absolute right-2 top-1/2 z-10 h-6 w-6 -translate-y-1/2 text-gray-500" />

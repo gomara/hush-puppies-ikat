@@ -25,11 +25,9 @@ function SelectedShoeSizes({ selectedShoe }: SelectedShoeSizesProps) {
     <div className="flex flex-col items-center">
       <div>
         <h2 className="font-serif text-xl font-semibold">{selectedShoe.name}</h2>
-        <Label className="text-md font-sans font-semibold text-primary">
-          ${selectedShoe.price}
-        </Label>
+        <p className="text-md font-sans font-semibold text-primary">${selectedShoe.price}</p>
         <span className="text-sm text-muted">Cod. de producto {selectedShoe.ref}</span>
-        <Label className="font-sans text-sm font-semibold text-muted-foreground">TALLA</Label>
+        <p className="font-sans text-sm font-semibold text-muted-foreground">TALLA</p>
         <div className="my-4 grid max-w-[300px] grid-cols-5 gap-2">
           {shoeSizes.map((size) => (
             <div
