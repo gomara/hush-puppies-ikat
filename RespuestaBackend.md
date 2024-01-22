@@ -76,3 +76,6 @@ Para implementar el nuevo modulo web para mostrar el estado de los conductores s
 - El nuevo modulo web se subscribe a los eventos de actualización de estado de los conductores y muestra el estado de los conductores en tiempo real junto con su ubicación en un mapa.
 
 Para el modulo web se puede usar ReactJS y para el mapa se puede usar la libreria de mapas de Google Maps junto con Socket.io para la comunicación en tiempo real con el microservicio de conductores. Tambien se puede usar GraphQL para la comunicación entre el modulo web y el microservicio de conductores.
+
+#### Esquema
+![Esquema](/public/Esquema.png)
