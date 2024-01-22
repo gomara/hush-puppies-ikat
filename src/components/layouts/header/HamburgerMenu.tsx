@@ -12,7 +12,7 @@ import {
 function HamburgerMenu() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger className="lg:absolute">
         <Menu className="h-4 w-4 cursor-pointer sm:h-6 sm:w-6 md:block md:h-8 md:w-8 lg:hidden" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
