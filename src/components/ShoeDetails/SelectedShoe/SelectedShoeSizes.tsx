@@ -3,6 +3,7 @@ import type { Product } from '@prisma/client';
 
 import React, { useMemo, useState } from 'react';
 import { Heart } from 'lucide-react';
+import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -24,9 +25,18 @@ function SelectedShoeSizes({ selectedShoe }: SelectedShoeSizesProps) {
   return (
     <div className="flex flex-col items-center">
       <div>
-        <h2 className="font-serif text-xl font-semibold">{selectedShoe.name}</h2>
+        <h2 className="font-serif text-xl font-semibold">{selectedShoe.name.toUpperCase()}</h2>
         <p className="text-md font-sans font-semibold text-primary">${selectedShoe.price}</p>
-        <span className="text-sm text-muted">Cod. de producto {selectedShoe.ref}</span>
+        <p className="mb-2 text-sm text-muted">Cod. de producto {selectedShoe.ref}</p>
+        <p className="font-sans text-sm font-semibold text-muted-foreground">COLOR</p>
+        <Image
+          unoptimized
+          alt="shoe-selected-variety"
+          className="my-4 border-2"
+          height={80}
+          src={selectedShoe.imgURL || ''}
+          width={85}
+        />
         <p className="font-sans text-sm font-semibold text-muted-foreground">TALLA</p>
         <div className="my-4 grid max-w-[300px] grid-cols-5 gap-2">
           {shoeSizes.map((size) => (
@@ -42,9 +52,9 @@ function SelectedShoeSizes({ selectedShoe }: SelectedShoeSizesProps) {
             </div>
           ))}
         </div>
-        <Label className="mb-4 cursor-pointer font-sans text-sm font-semibold text-muted-foreground underline">
+        <p className="mb-4 cursor-pointer font-sans text-sm font-semibold text-muted-foreground underline">
           GUÍA DE TALLAS
-        </Label>
+        </p>
         <div className="row flex items-center">
           <Button
             className="rounded-none font-sans"
