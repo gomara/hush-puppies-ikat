@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Label } from '@/components/ui/label';
+
 import CardsList from './CardsList';
 import FooterNav from './FooterNav';
 import FooterMedia from './FooterMedia';
@@ -10,7 +12,7 @@ function Footer() {
       <FooterMedia />
       <FooterNav />
       <div className="row flex justify-between gap-2 px-20 py-4">
-        <p className="text-center font-serif text-sm">© 2024 Cristobal Gomara Ikatech.</p>
+        <Label className="text-center font-serif text-sm">© 2024 Cristobal Gomara Ikatech.</Label>
         <CardsList />
       </div>
     </footer>

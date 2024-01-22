@@ -3,13 +3,14 @@ import React from 'react';
 
 import { Input } from '@/components/ui/input';
 import CustomLink from '@/components/ui/link';
+import { Label } from '@/components/ui/label';
 
 function FooterNav() {
   return (
     <nav className="grid gap-4 border-b-2 border-border px-20 py-6 sm:grid-cols-2 sm:gap-2 md:grid-cols-4">
       <ul className="text-left font-serif">
         <li>
-          <p className="mb-4 font-semibold">SERVICIO AL CLIENTE</p>
+          <Label className="mb-4 font-semibold">SERVICIO AL CLIENTE</Label>
           <div className="flex flex-col gap-2 tracking-wide">
             <CustomLink href="/#">CONTÁCTENOS</CustomLink>
             <CustomLink href="/#">CAMBIOS Y DEVOLUCIONES</CustomLink>
@@ -20,7 +21,7 @@ function FooterNav() {
       </ul>
       <ul className="text-left font-serif">
         <li>
-          <p className="mb-4 font-serif font-semibold">MI CUENTA</p>
+          <Label className="mb-4 font-serif font-semibold">MI CUENTA</Label>
           <div className="flex flex-col gap-2 tracking-wide">
             <CustomLink href="/#">MIS PEDIDOS</CustomLink>
             <CustomLink href="/#">MIS DEVOLUCIONES</CustomLink>
@@ -29,7 +30,7 @@ function FooterNav() {
       </ul>
       <ul className="text-left font-serif">
         <li>
-          <p className="mb-4 font-serif font-semibold">RECURSOS</p>
+          <Label className="mb-4 font-serif font-semibold">RECURSOS</Label>
           <div className="flex flex-col gap-2 tracking-wide">
             <CustomLink href="/#">TIENDA</CustomLink>
             <CustomLink href="/#">DEVOLUCIONES</CustomLink>
@@ -37,8 +38,8 @@ function FooterNav() {
         </li>
       </ul>
       <div className="text-left font-serif">
-        <p className="mb-4 font-serif font-semibold">NEWSLETTER</p>
-        <p className="mb-2">Regístrate para ser el primero en recibir nuestras noticias</p>
+        <Label className="mb-4 font-serif font-semibold">NEWSLETTER</Label>
+        <Label className="mb-2">Regístrate para ser el primero en recibir nuestras noticias</Label>
         <div className="relative">
           <ChevronRight className="absolute right-2 top-1/2 z-10 h-6 w-6 -translate-y-1/2 text-gray-500" />
           <Input
