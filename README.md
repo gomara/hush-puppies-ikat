@@ -69,4 +69,5 @@ Al hacer click en un zapato de alguna de las secciones, se cambia el zapato sele
 <br>
 Dentro de la sección `Completa tu look`, se puede hacer click en el botón `Agregar al carrito` para agregar el zapato seleccionado al carrito de compras y seleccionar la talla.
 
-Se utilizó Tailwind CSS para el diseño y estilizado de la página. Se utilizó la librería Shadcn para algunos componentes, me tome la libertad de cambiar algunos estilos, como tamaño de fuente, colores, etc.
+Se utilizó Tailwind CSS para el diseño y estilizado de la página. Se utilizó la librería Shadcn para algunos componentes, me tome la libertad de cambiar algunos estilos, como tamaño de fuente, colores, etc.<br>
+Además se cambio la imagen que iba en el footer debido a que la imagen que me enviaron quedaba muy pixelada.
