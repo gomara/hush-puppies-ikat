@@ -47,7 +47,7 @@ Si se decidio por utilizar una base de datos propia, es necesario correr las mig
 ``` bash
 $ npx prisma db push
 ```
-Luego se dejo en el archivo `src/app/api/route` un endpoint para poder cargar los datos de prueba en la base de datos si se desea.
+Luego se dejo en el archivo `src/app/api/sourde/route` un endpoint para poder cargar los datos de prueba en la base de datos si se desea.
 
 
 
